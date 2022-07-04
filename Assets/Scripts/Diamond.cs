@@ -20,7 +20,7 @@ public class Diamond : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out Player player))
         {
             Destroy(gameObject);
-            AudioSource.PlayClipAtPoint(_audioSource.clip,transform.position);
+            AudioSource.PlayClipAtPoint(_audioSource.clip, transform.position);
         }
     }
 }

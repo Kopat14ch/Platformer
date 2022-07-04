@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Flip))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int _movementSpeed;
@@ -36,11 +37,13 @@ public class Enemy : MonoBehaviour
     
     private IEnumerator ChangeDirection()
     {
+        WaitForSeconds waitForSeconds = new WaitForSeconds(_flipDelay);
+            
         while (_canChange)
         {
             _movementSpeed *= -1;
             
-            yield return new WaitForSeconds(_flipDelay);
+            yield return waitForSeconds;
         }
     }
     

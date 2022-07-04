@@ -1,16 +1,15 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpawnOnPoints))]
-[RequireComponent(typeof(Transform))]
-public class DiamondsSpawn : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private Diamond _diamond;
-    
+    [SerializeField] private Enemy _enemy;
+
     private SpawnOnPoints _spawnOnPoints;
 
     private void Start()
     {
         _spawnOnPoints = GetComponent<SpawnOnPoints>();
-        _spawnOnPoints.Spawn(_diamond.gameObject);
+        _spawnOnPoints.Spawn(_enemy.gameObject);
     }
 }
