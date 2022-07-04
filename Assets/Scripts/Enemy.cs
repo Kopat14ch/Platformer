@@ -29,20 +29,17 @@ public class Enemy : MonoBehaviour
     {
         Move();
     }
-
-
+    
     private void Move()
     {
         _rigidbody2D.velocity = new Vector2(_movementSpeed * Time.fixedDeltaTime, _rigidbody2D.velocity.y);
     }
-
-
+    
     private IEnumerator ChangeDirection()
     {
         while (_canChange)
         {
             _movementSpeed *= -1;
-            
             
             yield return new WaitForSeconds(_flipDelay);
         }
