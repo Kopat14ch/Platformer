@@ -41,9 +41,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Flip.cs" />
      <Compile Include="Assets\Enemy Galore 1 - Pixel Art\Script\EnemySelector.cs" />
      <Compile Include="Assets\Enemy Galore 1 - Pixel Art\Script\EnemyTest.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\DiamondsSpawn.cs" />
+     <Compile Include="Assets\Scripts\Diamond.cs" />
+     <Compile Include="Assets\Scripts\SpawnOnPoints.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawn.cs" />
+     <Compile Include="Assets\Scripts\Enemy.cs" />
      <None Include="Assets\Enemy Galore 1 - Pixel Art\Read Me.txt" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
