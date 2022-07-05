@@ -18,9 +18,7 @@ public class SpawnOnPoints : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
             GameObject newObject = Instantiate(_template, Vector3.zero, Quaternion.identity);
-            Transform newObjectTransform = newObject.GetComponent<Transform>();
-
-            newObjectTransform.position = _points[i].position;
+            newObject.transform.position = _points[i].position;
         }
     }
 }
